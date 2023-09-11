@@ -1,1 +1,1 @@
-this is a Git.
+this is a quiz game
