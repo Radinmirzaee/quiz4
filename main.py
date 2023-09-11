@@ -1,7 +1,26 @@
 def new_game():
-    pass
-def check_answer():
-    pass
+
+    guesses = []
+    question_num = 1
+    correct_answer = 0
+
+    for key in questions:
+        print(key)
+        guess = input("A, B, C, or D?: ").upper()
+        guesses.append(guess)
+        correct_answer += check_answer(questions.get(key),guess)
+        question_num += 1
+
+    print(correct_answer)
+
+# ----------------------------------------------------------------
+def check_answer(answer,guess):
+    if answer == guess:
+        print("Correct!")
+        return 1
+    else:
+        print("Wrong!")
+        return 0
 def display_score():
     pass
 def play_again():
