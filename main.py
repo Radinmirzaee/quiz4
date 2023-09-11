@@ -17,6 +17,8 @@ def new_game():
 
     display_score(questions,guesses,correct_answer)
 
+    play_again()
+
 # ----------------------------------------------------------------
 def check_answer(answer,guess):
     if answer == guess:
@@ -43,7 +45,12 @@ def display_score(questions,guesses,correct_answer):
 
 
 def play_again():
-    pass
+    response = input("Would you like to play again? (YES/NO): ")
+    response = response.upper()
+    if response == "YES":
+        new_game()
+    else:
+        print("BYE!")
 
 questions = {"How many elements are in the periodic table?: ": "C",
              "Which animal lays the largest eggs?: ": "D",
