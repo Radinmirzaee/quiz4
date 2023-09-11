@@ -13,6 +13,7 @@ def new_game():
 
     print(correct_answer)
 
+
 # ----------------------------------------------------------------
 def check_answer(answer,guess):
     if answer == guess:
